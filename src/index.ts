@@ -10,6 +10,8 @@ const User = require("./models/User");
 
 connectDB();
 
+console.log("credentials: ", credentials);
+
 app.use(credentials);
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
