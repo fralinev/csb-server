@@ -10,7 +10,7 @@ const allowedOrigins = require("./allowedOrigins");
 //   },
 // };
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://csb-server.vercel.app/",
   credentials: true,
 };
 
