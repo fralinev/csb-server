@@ -32,7 +32,7 @@ app.use(express.json());
 
 app.use("/signup", require("./routes/signup"));
 
-app.get("/", (req: any, res: any) => {
+app.get("/test", (req: any, res: any) => {
   res.json({ malloy: "MALLOY" });
 });
 
