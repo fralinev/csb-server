@@ -1,6 +1,6 @@
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://expressjs.com/en/resources/middleware/cors.html",
+  "https://csb-server.vercel.app",
 ];
 
 module.exports = allowedOrigins;
