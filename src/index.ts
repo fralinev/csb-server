@@ -32,6 +32,10 @@ app.use(express.json());
 
 app.use("/signup", require("./routes/signup"));
 
+app.get("/", (req: any, res: any) => {
+  res.json({ malloy: "MALLOY" });
+});
+
 app.listen(5050, () => {
   console.log("app is listening on port 5050");
 });
