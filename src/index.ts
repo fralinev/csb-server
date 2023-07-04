@@ -12,8 +12,21 @@ connectDB();
 
 console.log("credentials: ", credentials);
 
-app.use(credentials);
-app.use(cors(corsOptions));
+// app.use(credentials);
+
+app.use((req: any, res: any, next: any) => {
+  res.setHeader("Access-Control-Allow-Origins", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

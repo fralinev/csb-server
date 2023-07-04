@@ -19,7 +19,7 @@ const handleNewUser = async (req: any, res: any) => {
       username,
       password: hashedPwd,
     });
-    res.setHeader("Access-Control-Allow-Credentials", "http://localhost:3000");
+    // res.setHeader("Access-Control-Allow-Credentials", "http://localhost:3000");
 
     res.status(201).json({ success: `New user ${username} created!` });
   } catch (err: any) {
